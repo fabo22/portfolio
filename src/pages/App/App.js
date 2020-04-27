@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import Particles from 'react-particles-js';
 import './App.css';
-import resume from '../../downloads/resume.pdf';
 import { Navigation, Layout, Header, Drawer, Content } from 'react-mdl';
 import AboutMe from '../../components/aboutme';
 import Contact from '../../components/contact';
@@ -13,25 +12,27 @@ export default class App extends Component {
   render() {
     return(
       <div className="App">
-        <div style={{height: '100px', position: 'relative'}}>
+        <div style={{height: '100px'}}>
           <Layout>
-              <Header transparent title="Fabrizio Lopez" style={{color: 'white'}}>
+              <Header transparent title="Fabrizio Lopez" style={{color: 'black'}} scroll>
                   <Navigation>
-                    <NavLink exact to="/about">About Me</NavLink>
-                    <NavLink exact to="/projects">Projects</NavLink>
-                    <a href={resume} rel="noopener noreferrer" target="_blank" >Resume</a>
-                    <NavLink exact to="/contact">Contact</NavLink>
+                    <NavLink style={{color: 'black'}} exact to="/">Home</NavLink>
+                    <NavLink style={{color: 'black'}} exact to="/about">About Me</NavLink>
+                    <NavLink style={{color: 'black'}} exact to="/projects">Projects</NavLink>
+                    <NavLink style={{color: 'black'}} exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Header>
               <Drawer title="Test">
                   <Navigation>
+                    <NavLink style={{color: 'black'}} exact to="/">Home</NavLink>
                     <NavLink exact to="/about">About Me</NavLink>
                     <NavLink exact to="/projects">Projects</NavLink>
-                    <a href={resume} rel="noopener noreferrer" target="_blank" >Resume</a>
                     <NavLink exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Drawer>
-              <Content />
+              <Content>
+                <div className="page-content"/>
+              </Content>
           </Layout>
         </div>
         <main>

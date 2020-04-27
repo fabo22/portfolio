@@ -103,3 +103,34 @@
 span {
   color: white;
 }
+
+.mdl-layout-title {
+  color: black;
+}
+
+.material-icons {
+  color: black;
+}
+
+.skill-list {
+  font-size: 15px;
+}
+
+.about-list i {
+  font-size: 30px;
+  padding-right: 5rem;
+  color: white;
+}
+
+.big-name {
+  font-size: 100px;
+  font-family: 'Cutive', serif;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#icon {
+  font-size: 200px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
