@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Route, NavLink } from 'react-router-dom';
+import { Particles } from 'react-particles-js';
 import './App.css';
 import resume from '../../downloads/resume.pdf';
 import { Navigation, Layout, Header, Drawer, Content } from 'react-mdl';
@@ -47,6 +48,25 @@ export default class App extends Component {
             <Contact/>
           } />
         </main>
+        <Particles
+          params={{
+            "particles": {
+                "number": {
+                    "value": 50
+                },
+                "size": {
+                    "value": 3
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    }
+                }
+            }
+        }} />
       </div>
     );
   }
