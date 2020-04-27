@@ -14,7 +14,7 @@ export default class Contact extends Component {
                         />
 
                         <div className="banner-text">
-                            <h1>Full-Stack Software Engineer</h1>
+                            <h1>Full-Stack Web Developer | Software Engineer</h1>
 
                             <hr/>
 

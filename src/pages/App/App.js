@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import './App.css';
+import resume from '../../downloads/resume.pdf';
 import { Navigation, Layout, Header, Drawer, Content } from 'react-mdl';
 import AboutMe from '../../components/aboutme';
 import Contact from '../../components/contact';
 import Projects from '../../components/projects';
-import Resume from '../../components/resume';
 import Landing from '../../components/landing';
 
 export default class App extends Component {
@@ -18,7 +18,7 @@ export default class App extends Component {
                   <Navigation>
                     <NavLink exact to="/about">About Me</NavLink>
                     <NavLink exact to="/projects">Projects</NavLink>
-                    <NavLink exact to="/resume">Resume</NavLink>
+                    <a href={resume} rel="noopener noreferrer" target="_blank" >Resume</a>
                     <NavLink exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Header>
@@ -26,7 +26,7 @@ export default class App extends Component {
                   <Navigation>
                     <NavLink exact to="/about">About Me</NavLink>
                     <NavLink exact to="/projects">Projects</NavLink>
-                    <NavLink exact to="/resume">Resume</NavLink>
+                    <a href={resume} rel="noopener noreferrer" target="_blank" >Resume</a>
                     <NavLink exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Drawer>
@@ -42,9 +42,6 @@ export default class App extends Component {
           } />
           <Route exact path="/projects" render={( history ) => 
             <Projects/>
-          } />
-          <Route exact path="/resume" render={( history ) => 
-            <Resume/>
           } />
           <Route exact path="/contact" render={( history ) => 
             <Contact/>
