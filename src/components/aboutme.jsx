@@ -1,29 +1,10 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
 
 export default class AboutMe extends Component {
     render() {
         return(
             <div>
-        <Particles
-          params={{
-            "particles": {
-                "number": {
-                    "value": 50
-                },
-                "size": {
-                    "value": 3
-                }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    }
-                }
-            }
-        }} />
+                <h1>About Me Page</h1>
             </div>
         );
     }

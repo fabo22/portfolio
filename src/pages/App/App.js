@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Route, NavLink } from 'react-router-dom';
-import { Particles } from 'react-particles-js';
+import Particles from 'react-particles-js';
 import './App.css';
 import resume from '../../downloads/resume.pdf';
 import { Navigation, Layout, Header, Drawer, Content } from 'react-mdl';
@@ -13,8 +13,8 @@ export default class App extends Component {
   render() {
     return(
       <div className="App">
-        <div style={{height: '300px', position: 'relative'}}>
-          <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
+        <div style={{height: '100px', position: 'relative'}}>
+          <Layout>
               <Header transparent title="Fabrizio Lopez" style={{color: 'white'}}>
                   <Navigation>
                     <NavLink exact to="/about">About Me</NavLink>
@@ -35,6 +35,33 @@ export default class App extends Component {
           </Layout>
         </div>
         <main>
+
+        <Particles
+          className="particles"
+          params={{
+            "particles": {
+                "number": {
+                    "value":50,
+                },
+                "move": {
+                    "speed": 5,
+                },
+                "shape": {
+                    "type": [
+                        "image",
+                        "circle"
+                    ],
+                },
+                "color": {
+                    "value": "#fff"
+                },
+                "size": {
+                    "value": 10,
+                }
+            },
+            "retina_detect": false
+        }} />
+
           <Route exact path="/" render={( history ) => 
             <Landing/>
           } />
@@ -48,25 +75,6 @@ export default class App extends Component {
             <Contact/>
           } />
         </main>
-        <Particles
-          params={{
-            "particles": {
-                "number": {
-                    "value": 50
-                },
-                "size": {
-                    "value": 3
-                }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    }
-                }
-            }
-        }} />
       </div>
     );
   }
