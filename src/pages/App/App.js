@@ -16,7 +16,6 @@ export default class App extends Component {
           <Layout style={{background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover'}}>
               <Header transparent title="Fabrizio Lopez" style={{color: 'white'}}>
                   <Navigation>
-                    <NavLink exact to="/">Landing Page</NavLink>
                     <NavLink exact to="/about">About Me</NavLink>
                     <NavLink exact to="/projects">Projects</NavLink>
                     <NavLink exact to="/resume">Resume</NavLink>
@@ -25,7 +24,6 @@ export default class App extends Component {
               </Header>
               <Drawer title="Test">
                   <Navigation>
-                    <NavLink exact to="/">Landing Page</NavLink>
                     <NavLink exact to="/about">About Me</NavLink>
                     <NavLink exact to="/projects">Projects</NavLink>
                     <NavLink exact to="/resume">Resume</NavLink>
