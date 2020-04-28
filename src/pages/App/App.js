@@ -20,11 +20,10 @@ export default class App extends Component {
                     <NavLink style={{color: 'black'}} exact to="/">Home</NavLink>
                     <NavLink style={{color: 'black'}} exact to="/about">About Me</NavLink>
                     <NavLink style={{color: 'black'}} exact to="/projects">Projects</NavLink>
-                    <a style={{color: 'black'}} href={resume} rel="noopener noreferrer" target="_blank">Resume</a>
                     <NavLink style={{color: 'black'}} exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Header>
-              <Drawer style={{textAlign: 'center'}} title="Navigation">
+              <Drawer style={{textDecoration: 'none', color: 'black'}} title="Navigation">
                   <Navigation>
                     <NavLink style={{color: 'black'}} exact to="/">Home</NavLink>
                     <NavLink style={{color: 'black'}} exact to="/about">About Me</NavLink>
@@ -33,9 +32,6 @@ export default class App extends Component {
                     <NavLink style={{color: 'black'}} exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Drawer>
-              <Content>
-                <div className="page-content"/>
-              </Content>
           </Layout>
         </div>
         <main>

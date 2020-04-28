@@ -47,6 +47,11 @@ export default class AboutMe extends Component {
                                 </ListItem>
                             </List>
                         </div>
+                        <h2>Link to Resume</h2>
+                        <hr />
+                        <a href={resume} rel="noopener noreferrer" target="_blank">
+                            <p style={{ fontSize: '20px',width: '75%', margin: 'auto', paddingTop: '1em', textDecoration: 'none'}}>Resume</p>
+                        </a>
                     </Cell>
                 </Grid>
             </div>
