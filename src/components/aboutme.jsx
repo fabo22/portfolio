@@ -14,7 +14,7 @@ export default class AboutMe extends Component {
                         alt="avatar"
                         style={{ height: '250px' }}
                         />
-                        <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}>Hi, I'm Fabrizio Lopez. I'm a recent graduate of the Software Engineering Bootcamp at General Assembly. While at the bootcamp, I created many full-stack applications using Javascript technologies such as React, Express, NodeJs, and Python technologies such as Django. I have also worked with mongoDB and Postgresql as databases. I am passionate about Software Engineering, and I am excited to continue to grow as one!</p>
+                        <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}>Hi, I'm Fabrizio Lopez. I'm a recent graduate of the Software Engineering Bootcamp at General Assembly. While at the bootcamp, I created many full-stack applications using Javascript technologies such as React, Express, NodeJs, and Python technologies such as Django. I have also worked with mongoDB and Postgresql as databases. I am a passionate Software Engineer, and I am excited to continue to grow as one!</p>
                     </Cell>
                     <Cell col={6}>
                         <h2>Skills and Interests</h2>
@@ -38,12 +38,15 @@ export default class AboutMe extends Component {
                                 <ListItem>
                                     <ListItemContent style={{fontSize: '20px', fontFamily: 'Cutive'}}>
                                     <i className="fa fa-angle-right" aria-hidden="true"/>
-                                        
+                                        Pianist
+                                    </ListItemContent>
+                                    <ListItemContent style={{fontSize: '20px', fontFamily: 'Cutive'}}>
+                                    <i className="fa fa-angle-right" aria-hidden="true"/>
+                                        Gamer
                                     </ListItemContent>
                                 </ListItem>
                             </List>
                         </div>
-
                     </Cell>
                 </Grid>
             </div>

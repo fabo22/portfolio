@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Route, NavLink } from 'react-router-dom';
+import resume from '../../downloads/resume.pdf';
 import Particles from 'react-particles-js';
 import './App.css';
 import { Navigation, Layout, Header, Drawer, Content } from 'react-mdl';
@@ -14,20 +15,22 @@ export default class App extends Component {
       <div className="App">
         <div style={{height: '100px'}}>
           <Layout>
-              <Header transparent title="Fabrizio Lopez" style={{color: 'black'}} scroll>
+              <Header transparent title="My Portfolio" style={{color: 'black'}} scroll>
                   <Navigation>
                     <NavLink style={{color: 'black'}} exact to="/">Home</NavLink>
                     <NavLink style={{color: 'black'}} exact to="/about">About Me</NavLink>
                     <NavLink style={{color: 'black'}} exact to="/projects">Projects</NavLink>
+                    <a style={{color: 'black'}} href={resume} rel="noopener noreferrer" target="_blank">Resume</a>
                     <NavLink style={{color: 'black'}} exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Header>
-              <Drawer title="Test">
+              <Drawer style={{textAlign: 'center'}} title="Navigation">
                   <Navigation>
                     <NavLink style={{color: 'black'}} exact to="/">Home</NavLink>
-                    <NavLink exact to="/about">About Me</NavLink>
-                    <NavLink exact to="/projects">Projects</NavLink>
-                    <NavLink exact to="/contact">Contact</NavLink>
+                    <NavLink style={{color: 'black'}} exact to="/about">About Me</NavLink>
+                    <NavLink style={{color: 'black'}} exact to="/projects">Projects</NavLink>
+                    <a style={{color: 'black'}} href={resume} rel="noopener noreferrer" target="_blank">Resume</a>
+                    <NavLink style={{color: 'black'}} exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Drawer>
               <Content>
