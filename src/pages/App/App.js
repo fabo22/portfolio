@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Link } from 'react-router-dom';
 import resume from '../../downloads/resume.pdf';
 import Particles from 'react-particles-js';
 import './App.css';
-import { Navigation, Layout, Header, Drawer, Content } from 'react-mdl';
+import { Navigation, Layout, Header, Drawer } from 'react-mdl';
+import { AnimatedRoute } from 'react-router-transition';
 import AboutMe from '../../components/aboutme';
 import Contact from '../../components/contact';
 import Projects from '../../components/projects';
@@ -15,12 +16,12 @@ export default class App extends Component {
       <div className="App">
         <div style={{height: '100px'}}>
           <Layout>
-              <Header transparent title="My Portfolio" style={{color: 'black'}} scroll>
+              <Header transparent title="My Portfolio" style={{color: 'white'}} scroll>
                   <Navigation>
-                    <NavLink style={{color: 'black'}} exact to="/">Home</NavLink>
-                    <NavLink style={{color: 'black'}} exact to="/about">About Me</NavLink>
-                    <NavLink style={{color: 'black'}} exact to="/projects">Projects</NavLink>
-                    <NavLink style={{color: 'black'}} exact to="/contact">Contact</NavLink>
+                    <NavLink style={{color: 'white'}} exact to="/">Home</NavLink>
+                    <NavLink style={{color: 'white'}} exact to="/about">About Me</NavLink>
+                    <NavLink style={{color: 'white'}} exact to="/projects">Projects</NavLink>
+                    <NavLink style={{color: 'white'}} exact to="/contact">Contact</NavLink>
                   </Navigation>
               </Header>
               <Drawer style={{textDecoration: 'none', color: 'black'}} title="Navigation">
@@ -61,18 +62,31 @@ export default class App extends Component {
             },
             "retina_detect": false
         }} />
-
+              <AnimatedRoute
+                path="/about"
+                component={AboutMe}
+                atEnter={{ offset: -100 }}
+                atLeave={{ offset: -100 }}
+                atActive={{ offset: 0 }}
+                mapStyles={(styles) => ({
+                  transform: `translateX(${styles.offset}%)`,
+                })}
+          />
+              <AnimatedRoute
+                path="/contact"
+                component={Contact}
+                atEnter={{ offset: -100 }}
+                atLeave={{ offset: -100 }}
+                atActive={{ offset: 0 }}
+                mapStyles={(styles) => ({
+                  transform: `translateX(${styles.offset}%)`,
+                })}
+          />
           <Route exact path="/" render={( history ) => 
             <Landing/>
           } />
-          <Route exact path="/about" render={( history ) => 
-            <AboutMe/>
-          } />
           <Route exact path="/projects" render={( history ) => 
             <Projects/>
-          } />
-          <Route exact path="/contact" render={( history ) => 
-            <Contact/>
           } />
         </main>
       </div>

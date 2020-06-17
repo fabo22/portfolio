@@ -14,7 +14,7 @@ export default class Contact extends Component {
 
                             <hr/>
 
-                            <p>HTML/CSS | Materialize | JavaScript | React | NodeJS | Express | mongoDB | Python | Django</p>
+                            <p>HTML/CSS | Materialize | JavaScript | React | NodeJS | Express | mongoDB | Python | Django | PostgreSQL</p>
 
                             <div className="social-links">
 

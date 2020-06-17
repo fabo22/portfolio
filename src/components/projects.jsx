@@ -95,10 +95,10 @@ export default class Projects extends Component {
         return(
             <div className="category-tabs">
                 <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-                    <Tab style={{color: 'black'}}>React Projects</Tab>
-                    <Tab style={{color: 'black'}}>Express Projects</Tab>
-                    <Tab style={{color: 'black'}}>Django Projects</Tab>
-                    <Tab style={{color: 'black'}}>Other Projects</Tab>
+                    <Tab style={{color: 'white'}}>React Projects</Tab>
+                    <Tab style={{color: 'white'}}>Express Projects</Tab>
+                    <Tab style={{color: 'white'}}>Django Projects</Tab>
+                    <Tab style={{color: 'white'}}>Other Projects</Tab>
                 </Tabs>
 
                 <Grid>

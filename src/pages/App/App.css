@@ -105,11 +105,12 @@ span {
 }
 
 .mdl-layout-title {
-  color: black;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .material-icons {
-  color: black;
+  color: white;
 }
 
 .skill-list {
@@ -127,6 +128,7 @@ span {
   font-family: 'Cutive', serif;
   padding-top: 20px;
   padding-bottom: 50px;
+  color: rgba(255, 255, 255, 0.8)
 }
 
 #icon {
